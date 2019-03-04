@@ -95,7 +95,6 @@ added 4 packages from 2 contributors in 1.688s
 $ ls node/bin
 gistup		gistup-open	gistup-rename	node		npm		npx
 
-Создаем файл .gistup.json, где будет находится наш gist token
 
 $ cat > ~/.gistup.json <<EOF
 {
