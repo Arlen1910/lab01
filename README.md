@@ -172,24 +172,24 @@ $ gistup -m "lab${LAB_NUMBER}" # enter: yes↵
 1. Скачайте библиотеку *boost* с помощью утилиты **wget**. Адрес для скачивания `https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz`.
 wget https://sourceforge.net/projects/boost/files/boost/1.69.0/boost_1_69_0.tar.gz #скачиваем исходники
 2. Разархивируйте скаченный файл в директорию `~/boost_1_69_0`
-$ tar -xf boost_1_69_0.tar.gz # распаковываем архив
+`$ tar -xf boost_1_69_0.tar.gz # распаковываем архив
 $ rm -rf boost_1_69_0.tar.gz # удаляем архив
-$ cd boost_1_69_0 # переходим в каталог с *boost*
+$ cd boost_1_69_0 # переходим в каталог с *boost*`
 3. Подсчитайте количество файлов в директории `~/boost_1_69_0` **не включая** вложенные директории.
-$ ls -f . | wc -l
-20
+`$ ls -f . | wc -l
+20`
 4. Подсчитайте количество файлов в директории `~/boost_1_69_0` **включая** вложенные директории.
-$ find . -type f | wc -l
-61191
+`$ find . -type f | wc -l
+61191`
 5. Подсчитайте количество заголовочных файлов, файлов с расширением `.cpp`, сколько остальных файлов (не заголовочных и не `.cpp`).
-$ find . -type f -name '*.h' | wc -l
+`$ find . -type f -name '*.h' | wc -l
 296
 $ find . -type f -name '*.cpp' | wc -l
 13774
 $ find . -type f '!' -name '*.cpp' -a '!' -name '*.h' | wc -l
-47121
+47121`
 6. Найдите полный пусть до файла `any.hpp` внутри библиотеки *boost*.
-$ find . -type f -name 'any.hpp'
+`$ find . -type f -name 'any.hpp'
 ./boost/fusion/include/any.hpp
 ./boost/fusion/algorithm/query/any.hpp
 ./boost/fusion/algorithm/query/detail/any.hpp
@@ -199,22 +199,22 @@ $ find . -type f -name 'any.hpp'
 ./boost/hana/fwd/any.hpp
 ./boost/hana/any.hpp
 ./boost/any.hpp
-./boost/xpressive/detail/utility/any.hpp
+./boost/xpressive/detail/utility/any.hpp`
 7. Выведите в консоль все файлы, где упоминается последовательность `boost::asio`.
-$ grep -lr 'boost::asio' .
+`$ grep -lr 'boost::asio' .
 ...
 ...
-./doc/html/process/reference.html
+./doc/html/process/reference.html`
 8. Скомпилирутйе *boost*. Можно воспользоваться [инструкцией](https://www.boost.org/doc/libs/1_61_0/more/getting_started/unix-variants.html#or-build-custom-binaries) или [ссылкой](https://codeyarns.com/2017/01/24/how-to-build-boost-on-linux/). # prefix 
-$ ./bootstrap.sh --prefix=boost_output # prefix указывает в какой папке будут скомпилированы библиотеки и include файлы
-$ ./b2 install
+`$ ./bootstrap.sh --prefix=boost_output # prefix указывает в какой папке будут скомпилированы библиотеки и include файлы
+$ ./b2 install`
 9. Перенесите все скомпилированные на предыдущем шаге статические библиотеки в директорию `~/boost-libs`.
-$ cd ..
-$ mv boost_1_69_0/boost_output boost-libs
+`$ cd ..
+$ mv boost_1_69_0/boost_output boost-libs`
 10. Подсчитайте сколько занимает дискового пространства каждый файл в этой директории.
-$ tree -h
+`$ tree -h`
 11. Найдите *топ10* самых "тяжёлых".
-$ find .  -type f -exec du -sh {} 2>/dev/null + | sort -rh | head -n 10
+`$ find .  -type f -exec du -sh {} 2>/dev/null + | sort -rh | head -n 10`
 
 ```
 Copyright (c) 2015-2019 The ISC Authors
