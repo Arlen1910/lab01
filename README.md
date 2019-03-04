@@ -22,7 +22,7 @@ $ alias edit=atom
 ```
 
 ```ShellSession
-```bash
+
 # Создаем директорию с нашим именем пользователя и со вложенной папкой workspace
 $ mkdir -p ${GITHUB_USERNAME}/workspace
 # Переходим в созданный катало
@@ -38,7 +38,7 @@ $ pwd
 ```
 
 ```ShellSession
-```bash
+
 # Создаем дочерние каталоги, используя флаг -p
 $ mkdir -p workspace/tasks/
 $ mkdir -p workspace/projects/
@@ -48,7 +48,7 @@ $ cd workspace
 ```
 
 ```ShellSession
-```bash
+
 # macOS
 # Скачиваем архив с последней версией nodejs для macOS
 $ wget https://nodejs.org/dist/v6.11.5/node-v6.11.5-linux-x64.tar.xz
@@ -61,7 +61,7 @@ $ mv node-v6.11.5-linux-x64 node
 ```
 
 ```ShellSession
-```bash
+
 $ ls node/bin
 node	npm
 # Выводим список директорий, где терминал ищет исполняемые файлы
@@ -83,7 +83,7 @@ $ source scripts/activate
 ```
 
 ```ShellSession
-```bash
+
 # Устанавливаем gistup при помощи npm
 $ npm install -g gistup
 /Users/arlenkurstanbekov/workspace/node/bin/gistup ->
@@ -111,7 +111,7 @@ EOF
 ## Report
 
 ```ShellSession
-```bash
+
 # Добавляем переменную с номером л/р
 $ export LAB_NUMBER=01
 # Клонируем репозиторий с л/р в директорию tasks/lab01
